@@ -15,9 +15,9 @@ int parent(int i) {
     return floor((i-1)/2);
 }
 
-void heapsort(int* tab, int leftIndex, int rightIndex) {
-    int start = (rightIndex+1) / 2;
-    int end = rightIndex+1;
+void heapsort(int* tab, int size) {
+    int start = (size+1) / 2;
+    int end = size+1;
     while (end > 0) {
         if (start > 0) {
             start -=1;

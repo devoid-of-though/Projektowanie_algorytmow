@@ -33,11 +33,11 @@ int partition(int* tab, int leftIndex, int rightIndex) {
     }
 }
 void intro(int* tab, int leftIndex, int rightIndex, int maxdepth) {
-    int size = rightIndex - leftIndex + 1;
+    int size = rightIndex - leftIndex;
     if (size < 16) {
         insertion(tab, leftIndex, rightIndex);
     } else if (maxdepth == 0) {
-        heapsort(tab , leftIndex, rightIndex);
+        heapsort(tab+leftIndex , size);
     } else {
         int p = partition(tab, leftIndex, rightIndex);
         intro(tab, leftIndex, p, maxdepth - 1);
@@ -45,9 +45,8 @@ void intro(int* tab, int leftIndex, int rightIndex, int maxdepth) {
     }
 }
 
-void introsort(int* tab, int leftIndex, int rightIndex) {
-    int size = rightIndex+1;
+void introsort(int* tab, int size) {
     if (size <= 0) return;
     int maxdepth = 2 * log2(size);
-    intro(tab, 0, size - 1, maxdepth);
+    intro(tab, 0, size, maxdepth);
 }
