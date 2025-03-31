@@ -13,9 +13,6 @@ void quicksort(int* tab, int leftIndex, int rightIndex) {
     int startCounter = leftIndex +1;
     int Counter2 = leftIndex +1;
     int Counter3 = rightIndex -1;
-    if ( tab[leftIndex]> tab[rightIndex]) {
-        swap(tab[leftIndex], tab[rightIndex]);
-    }
     while (Counter2 <= Counter3) {
         if (tab[Counter2] < tab[leftIndex]) {
             swap(tab[Counter2], tab[startCounter]);

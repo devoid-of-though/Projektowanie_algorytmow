@@ -5,17 +5,16 @@
 #include <filesystem>
 using namespace std;
 
-void tofile(int* x,int size,string type,int sample,double percent){
-    string filename = string("/home/userbrigh/CLionProjects/Projektowanie_algorytmow/") +type+"/"+"not_sorted"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "array_" +to_string(size)+"_"+to_string(sample+1)+"_"+to_string((int)(percent*1000))+ ".txt";
+void tofile(int* x,int size,int sample,double percent){
+    string filename = string("/home/userbrigh/CLionProjects/Projektowanie_algorytmow/")+"wyniki"+"/"+"not_sorted"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "array_" +to_string(size)+"_"+to_string(sample+1)+"_"+to_string((int)(percent*1000))+ ".txt";
     ofstream myfile (filename);
     for(int i = 0; i < size; i ++){
         myfile << x[i] << " " ;
     }
     myfile.close();
 }
-void resultstofile(long duration, int size,string type, int sample,double percent) {
-    string filename =
-        "/home/userbrigh/CLionProjects/Projektowanie_algorytmow/" + type + "/results"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "results_"+ to_string(size)+"_"   + to_string((int)(percent*1000)) + ".txt";
+void resultstofile(long long duration, int size,string type, int sample,double percent) {
+    string filename = string("/home/userbrigh/CLionProjects/Projektowanie_algorytmow/")+"wyniki/" + type + "/results"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "results_"+ to_string(size)+"_"   + to_string((int)(percent*1000)) + ".txt";
     ofstream logfile(filename, ios::app);
     if (logfile.is_open()) {
         logfile << duration << "\n";
@@ -25,7 +24,7 @@ void resultstofile(long duration, int size,string type, int sample,double percen
     }
 }
 void sortedtofile(int* x,int size,string type,int sample,double percent){
-    string filename = string("/home/userbrigh/CLionProjects/Projektowanie_algorytmow/") +type+"/"+"sorted"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "sorted_array_" +to_string(size)+"_"+ to_string(sample)+"_"+ to_string((int)(percent*1000))+ ".txt";
+    string filename = string("/home/userbrigh/CLionProjects/Projektowanie_algorytmow/") +"wyniki/"+type+"/"+"sorted"+"/"+to_string(size)+"/"+to_string((int)(percent*1000))+"/"+ "sorted_array_" +to_string(size)+"_"+ to_string(sample)+"_"+ to_string((int)(percent*1000))+ ".txt";
     ofstream myfile (filename);
     for(int i = 0; i < size; i ++){
         myfile << x[i] << " " ;

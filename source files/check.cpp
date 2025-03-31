@@ -2,15 +2,16 @@
 
 using namespace std;
 
-void check(int* tab, int size) {
-    for (int i =0; i <size-1; i++) {
-        if (tab[i] <= tab[i+1]) {
-            cout << "all good!\n";
-        }
-        else {
-            cout << tab[i] << "not <=" << tab[i+1];
-            break;
+bool check(int* arr, int size) {
+    if (size <= 1) return true;
+
+    for (int i = 0; i < size - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+            std::cout << "Unsorted elements at positions " << i
+                      << " (" << arr[i] << ") and " << i+1
+                      << " (" << arr[i+1] << ")\n";
+            return false;
         }
     }
-    cout << "ALL ALL good!";
+    return true;
 }

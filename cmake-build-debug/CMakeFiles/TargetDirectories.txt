@@ -1,0 +1,3 @@
+/home/userbrigh/CLionProjects/Projektowanie_algorytmow/cmake-build-debug/CMakeFiles/Projektowanie_algorytmow.dir
+/home/userbrigh/CLionProjects/Projektowanie_algorytmow/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/userbrigh/CLionProjects/Projektowanie_algorytmow/cmake-build-debug/CMakeFiles/rebuild_cache.dir

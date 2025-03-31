@@ -17,8 +17,8 @@ int parent(int i) {
 
 void heapsort(int* tab, int leftIndex, int rightIndex) {
     int start = (rightIndex+1) / 2;
-    int end = rightIndex;
-    while (end > 1) {
+    int end = rightIndex+1;
+    while (end > 0) {
         if (start > 0) {
             start -=1;
         } else {

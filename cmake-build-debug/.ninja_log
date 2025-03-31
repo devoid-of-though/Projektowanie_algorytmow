@@ -1,0 +1,9 @@
+# ninja log v6
+3	785	1743439921439633105	CMakeFiles/Projektowanie_algorytmow.dir/source_files/fileMaker.cpp.o	203003aa2dc2ddd7
+2	458	1743439921438633045	CMakeFiles/Projektowanie_algorytmow.dir/source_files/quicksort.cpp.o	9a154213f730c499
+1	636	1743439921437632985	CMakeFiles/Projektowanie_algorytmow.dir/source_files/main.cpp.o	7e2651578c8bb993
+1	312	1743439921437632985	CMakeFiles/Projektowanie_algorytmow.dir/source_files/check.cpp.o	6cb755a92c420901
+2	330	1743439921438633045	CMakeFiles/Projektowanie_algorytmow.dir/source_files/heapsort.cpp.o	a784b97674b0a5d2
+0	17	1743440022289665382	build.ninja	d6a6e787a2303e45
+1	193	1743439921437632985	CMakeFiles/Projektowanie_algorytmow.dir/source_files/introsort.cpp.o	e318bd876cc85d7a
+785	856	1743439922221679882	Projektowanie_algorytmow	4589b9ec942eb891

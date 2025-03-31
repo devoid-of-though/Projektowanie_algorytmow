@@ -15,31 +15,29 @@ void insertion(int* tab, int leftIndex, int rightIndex) {
     }
 
 }
-int partition(int* tab,int leftIndex, int rightIndex) {
+int partition(int* tab, int leftIndex, int rightIndex) {
     int pivot = tab[leftIndex];
-    int i = leftIndex;
-    int j = rightIndex;
-    while(true) {
-        while(tab[i]<=pivot) {
-            i+=1;
-        }
-        while(tab[j]>pivot) {
-            j-=1;
-        }
-        if (i>=j) {
+    int i = leftIndex - 1;
+    int j = rightIndex + 1;
+    while (true) {
+        do {
+            i++;
+        } while (tab[i] < pivot);
+        do {
+            j--;
+        } while (tab[j] > pivot);
+        if (i >= j) {
             return j;
         }
-        swap(tab[i],tab[j]);
+        swap(tab[i], tab[j]);
     }
-
-
 }
 void intro(int* tab, int leftIndex, int rightIndex, int maxdepth) {
     int size = rightIndex - leftIndex + 1;
     if (size < 16) {
         insertion(tab, leftIndex, rightIndex);
     } else if (maxdepth == 0) {
-        heapsort(tab , leftIndex, size-1);
+        heapsort(tab , leftIndex, rightIndex);
     } else {
         int p = partition(tab, leftIndex, rightIndex);
         intro(tab, leftIndex, p, maxdepth - 1);
