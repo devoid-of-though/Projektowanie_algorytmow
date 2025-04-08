@@ -30,7 +30,6 @@ void heapsort(int* tab, int leftIndex,int rightIndex) {
             swap(tab[end], tab[0]);
         }
         int root = start;
-
         while (leftChild(root) < end) {
             int child = leftChild(root);
             //jeżeli prawy potomek jest większy od lewego i istnieje to przypisanie do zmiennej child
